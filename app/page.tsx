@@ -1,15 +1,17 @@
-import SeoForm from './components/seoform';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import SeoForm from '../components/SeoForm';
+import SeoDashboard from '../components/SeoDashboard';
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <main className="min-h-screen bg-gray-50 text-gray-800 p-8">
-      <div className="max-w-2xl mx-auto text-center">
-        <h1 className="text-5xl font-bold text-blue-600 mb-4">SEO Analyzer Pro 🚀</h1>
-        <p className="text-lg mb-6">
-          Analysez, optimisez et propulsez votre site web vers les sommets du référencement.
-        </p>
+    <>
+      <Header />
+      <main className="min-h-screen bg-indigo-100 py-10 space-y-10 px-4">
         <SeoForm />
-      </div>
-    </main>
+        <SeoDashboard />
+      </main>
+      <Footer />
+    </>
   );
 }
